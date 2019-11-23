@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
+
     "start": "webpack-dev-server --mode development --open --hot"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dawid Kolankowski",
   "license": "ISC",
+
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "ie >= 9"
+],
+
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",

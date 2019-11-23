@@ -11,21 +11,22 @@ $sm: 576px;
 
 body,
 html {
+ 
   margin: 0px;
-  padding-top: 10px;
-  min-height: 100%;
+ height: 100%;
   font-family: "Roboto", sans-serif;
 }
-
+#root{
+  height:100%;
+}
 .container {
   display: flex;
   justify-content: center;
   width: 80%;
+  height:100%;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  background: white;
-  border-radius: 15px;
   padding: 15px;
 
   @media screen and (min-width: $sm) {
@@ -67,7 +68,7 @@ html {
 .suggestion {
   display: none;
   position: absolute;
-  top: 46px;
+  top: 45px;
   width: 100%;
   background: #ecf0f1;
   border-radius: 0px 0px 30px 30px;
@@ -106,3 +107,4 @@ html {
   min-width: 250px;
   flex: 1;
 }
+

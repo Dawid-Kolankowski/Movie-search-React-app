@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
       this.state.searchBox !== ""
     ) {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/search/movie?",
+        "http://api.themoviedb.org/3/search/movie?",
         {
           params: {
             query: this.state.searchBox,

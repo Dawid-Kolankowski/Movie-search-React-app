@@ -53,7 +53,7 @@ class MovieInfo extends React.Component {
         : "No data";
 
     if (this.props.movie.length === 0) {
-      return <div>Please chose movie</div>;
+      return null;
     } else {
       return (
         <div className="movie-info">
