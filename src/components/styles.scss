@@ -1,0 +1,88 @@
+$elg: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0px;
+  padding-top: 10px;
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+
+  @media screen and (min-width: $sm) {
+    width: 540px;
+  }
+  @media screen and (min-width: $md) {
+    width: 720px;
+  }
+  @media screen and (min-width: $lg) {
+    width: 960px;
+  }
+  @media screen and (min-width: $elg) {
+    width: 1140px;
+  }
+}
+
+.search-box {
+  position: relative;
+}
+.search-box input {
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  background-color: #ecf0f1;
+  font-size: 2.5rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-box input:focus + .suggestion {
+  display: block;
+}
+
+.suggestion {
+  display: none;
+  position: absolute;
+  top: 46px;
+  width: 100%;
+  background: #ecf0f1;
+  border-radius: 0px 0px 30px 30px;
+  padding-right: 30px;
+  font-size: 2rem;
+  list-style-type: none;
+
+  &:hover {
+    display: block;
+  }
+  li {
+    border-top: 2px solid white;
+  }
+
+  li:first-child {
+    border-top: none;
+  }
+}

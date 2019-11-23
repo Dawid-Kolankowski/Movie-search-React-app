@@ -1,13 +1,13 @@
-import React from 'react'
-import './styles.scss'
-
+import React from "react";
+import "./styles.scss";
+import SearchBar from "./SearchBar";
 
 const App = () => {
+  return (
+    <div className="container" type="text">
+      <SearchBar />
+    </div>
+  );
+};
 
-return(
-    <div>Init!</div>
-)
-
-}
-
-export default App
+export default App;
