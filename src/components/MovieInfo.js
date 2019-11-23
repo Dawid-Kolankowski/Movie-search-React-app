@@ -10,7 +10,7 @@ class MovieInfo extends React.Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      "https://api.themoviedb.org/3/genre/movie/list?",
+      "http://api.themoviedb.org/3/genre/movie/list?",
       {
         params: {
           language: "en-US",
@@ -18,7 +18,7 @@ class MovieInfo extends React.Component {
         }
       }
     );
-    console.log("ebe");
+    
     this.setState({ genres: response.data.genres });
   }
 
@@ -41,7 +41,7 @@ class MovieInfo extends React.Component {
         }
       }
     }
-    console.log(genres_return);
+   
     return genres_return;
   };
 

@@ -1,10 +1,10 @@
 import React from "react";
 
 const Suggestions = ({ suggestions, setMovie }) => {
-  return suggestions.map(suggestions => {
+  return suggestions.map(suggestion => {
     return (
-      <li key={suggestions.id} onClick={() => setMovie(suggestions)}>
-        {suggestions.title}
+      <li key={suggestion.id} onClick={() => setMovie(suggestion)}>
+        {suggestion.title}
       </li>
     );
   });

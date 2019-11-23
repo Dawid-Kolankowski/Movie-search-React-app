@@ -22,17 +22,22 @@ class SearchBar extends React.Component {
             query: this.state.searchBox,
             language: "en-US",
             api_key: "a7fe95d8f28e2004483d7c51aa72042b",
-            page:'1',
-            include_adult:'false',
-            
+            page: "1",
+            include_adult: "false"
           }
         }
       );
 
       this.setState({ movies: response.data.results.slice(0, 5) });
-      
     }
   }
+
+  onSelect = (selectedMovie) => {
+
+    this.props.setMovie(selectedMovie)
+    this.setState({movies:[],
+    searchBox:""})
+  };
 
   render() {
     let Popup;
@@ -43,7 +48,7 @@ class SearchBar extends React.Component {
       Popup = (
         <ul className="suggestion">
           <Suggestions
-            setMovie={this.props.setMovie}
+            setMovie={this.onSelect}
             suggestions={this.state.movies}
           />
         </ul>
