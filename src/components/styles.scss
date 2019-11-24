@@ -81,6 +81,9 @@ html {
   }
   li {
     border-top: 2px solid white;
+    &:hover{
+      cursor: pointer;
+    }
   }
 
   li:first-child {
